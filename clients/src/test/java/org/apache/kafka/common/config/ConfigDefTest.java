@@ -694,13 +694,17 @@ public class ConfigDefTest {
         assertEquals(" (1 kibibyte)", ConfigDef.niceMemoryUnits(1024));
         assertEquals("", ConfigDef.niceMemoryUnits(1025));
         assertEquals(" (2 kibibytes)", ConfigDef.niceMemoryUnits(2 * 1024));
+        assertEquals(" (1023 kibibytes)", ConfigDef.niceMemoryUnits(1023 * 1024));
+        assertEquals(" (1025 kibibytes)", ConfigDef.niceMemoryUnits(1025 * 1024));
         assertEquals(" (1 mebibyte)", ConfigDef.niceMemoryUnits(1024 * 1024));
         assertEquals(" (2 mebibytes)", ConfigDef.niceMemoryUnits(2 * 1024 * 1024));
         assertEquals(" (1 gibibyte)", ConfigDef.niceMemoryUnits(1024 * 1024 * 1024));
         assertEquals(" (2 gibibytes)", ConfigDef.niceMemoryUnits(2L * 1024 * 1024 * 1024));
+        assertEquals(" (1023 gibibytes)", ConfigDef.niceMemoryUnits(1023L * 1024 * 1024 * 1024));
         assertEquals(" (1 tebibyte)", ConfigDef.niceMemoryUnits(1024L * 1024 * 1024 * 1024));
         assertEquals(" (2 tebibytes)", ConfigDef.niceMemoryUnits(2L * 1024 * 1024 * 1024 * 1024));
         assertEquals(" (1024 tebibytes)", ConfigDef.niceMemoryUnits(1024L * 1024 * 1024 * 1024 * 1024));
+        assertEquals(" (1025 tebibytes)", ConfigDef.niceMemoryUnits(1025L * 1024 * 1024 * 1024 * 1024));
         assertEquals(" (2048 tebibytes)", ConfigDef.niceMemoryUnits(2L * 1024 * 1024 * 1024 * 1024 * 1024));
     }
 
